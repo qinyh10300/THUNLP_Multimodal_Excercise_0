@@ -1,0 +1,283 @@
+[2025-06-30 10:31:46,609] torch.distributed.run: [WARNING] 
+[2025-06-30 10:31:46,609] torch.distributed.run: [WARNING] *****************************************
+[2025-06-30 10:31:46,609] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2025-06-30 10:31:46,609] torch.distributed.run: [WARNING] *****************************************
+[2025-06-30 10:31:49,415] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-06-30 10:31:49,416] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-06-30 10:31:49,425] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-06-30 10:31:49,439] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-06-30 10:31:49,448] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-06-30 10:31:49,448] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-06-30 10:31:49,449] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-06-30 10:31:49,451] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-06-30 10:31:50,205] [INFO] [comm.py:652:init_distributed] cdb=None
+[2025-06-30 10:31:50,224] [INFO] [comm.py:652:init_distributed] cdb=None
+[2025-06-30 10:31:50,224] [INFO] [comm.py:652:init_distributed] cdb=None
+[2025-06-30 10:31:50,232] [INFO] [comm.py:652:init_distributed] cdb=None
+[2025-06-30 10:31:50,233] [INFO] [comm.py:652:init_distributed] cdb=None
+[2025-06-30 10:31:50,233] [INFO] [comm.py:652:init_distributed] cdb=None
+[2025-06-30 10:31:50,285] [INFO] [comm.py:652:init_distributed] cdb=None
+[2025-06-30 10:31:50,307] [INFO] [comm.py:652:init_distributed] cdb=None
+[2025-06-30 10:31:50,307] [INFO] [comm.py:683:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+Traceback (most recent call last):
+  File "/var/envs/rlq/lib/python3.10/site-packages/transformers/utils/hub.py", line 398, in cached_file
+    resolved_file = hf_hub_download(
+  File "/var/envs/rlq/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/var/envs/rlq/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/home/user0/rlq/THUNLP_Multimodal_Excercise/MODEL_CKPT/MLLM_Excercise_Model'. Use `repo_type` argument if needed.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/user0/qinyh/codebase/THUNLP_Multimodal_Excercise/mllm/finetune.py", line 351, in <module>
+    train()
+  File "/home/user0/qinyh/codebase/THUNLP_Multimodal_Excercise/mllm/finetune.py", line 317, in train
+    model, data_module, tokenizer = init_model(model_args, data_args, training_args, lora_args)
+  File "/home/user0/qinyh/codebase/THUNLP_Multimodal_Excercise/mllm/finetune.py", line 204, in init_model
+    model = MLLMModel.from_pretrained(
+  File "/var/envs/rlq/lib/python3.10/site-packages/transformers/modeling_utils.py", line 3015, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/var/envs/rlq/lib/python3.10/site-packages/transformers/utils/hub.py", line 462, in cached_file
+    raise EnvironmentError(
+OSError: Incorrect path_or_model_id: '/home/user0/rlq/THUNLP_Multimodal_Excercise/MODEL_CKPT/MLLM_Excercise_Model'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+Traceback (most recent call last):
+  File "/var/envs/rlq/lib/python3.10/site-packages/transformers/utils/hub.py", line 398, in cached_file
+    resolved_file = hf_hub_download(
+  File "/var/envs/rlq/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/var/envs/rlq/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/home/user0/rlq/THUNLP_Multimodal_Excercise/MODEL_CKPT/MLLM_Excercise_Model'. Use `repo_type` argument if needed.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/user0/qinyh/codebase/THUNLP_Multimodal_Excercise/mllm/finetune.py", line 351, in <module>
+    train()
+  File "/home/user0/qinyh/codebase/THUNLP_Multimodal_Excercise/mllm/finetune.py", line 317, in train
+    model, data_module, tokenizer = init_model(model_args, data_args, training_args, lora_args)
+  File "/home/user0/qinyh/codebase/THUNLP_Multimodal_Excercise/mllm/finetune.py", line 204, in init_model
+    model = MLLMModel.from_pretrained(
+  File "/var/envs/rlq/lib/python3.10/site-packages/transformers/modeling_utils.py", line 3015, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/var/envs/rlq/lib/python3.10/site-packages/transformers/utils/hub.py", line 462, in cached_file
+    raise EnvironmentError(
+OSError: Incorrect path_or_model_id: '/home/user0/rlq/THUNLP_Multimodal_Excercise/MODEL_CKPT/MLLM_Excercise_Model'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+Traceback (most recent call last):
+  File "/var/envs/rlq/lib/python3.10/site-packages/transformers/utils/hub.py", line 398, in cached_file
+    resolved_file = hf_hub_download(
+  File "/var/envs/rlq/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/var/envs/rlq/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/home/user0/rlq/THUNLP_Multimodal_Excercise/MODEL_CKPT/MLLM_Excercise_Model'. Use `repo_type` argument if needed.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/user0/qinyh/codebase/THUNLP_Multimodal_Excercise/mllm/finetune.py", line 351, in <module>
+    train()
+  File "/home/user0/qinyh/codebase/THUNLP_Multimodal_Excercise/mllm/finetune.py", line 317, in train
+    model, data_module, tokenizer = init_model(model_args, data_args, training_args, lora_args)
+  File "/home/user0/qinyh/codebase/THUNLP_Multimodal_Excercise/mllm/finetune.py", line 204, in init_model
+    model = MLLMModel.from_pretrained(
+  File "/var/envs/rlq/lib/python3.10/site-packages/transformers/modeling_utils.py", line 3015, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/var/envs/rlq/lib/python3.10/site-packages/transformers/utils/hub.py", line 462, in cached_file
+    raise EnvironmentError(
+OSError: Incorrect path_or_model_id: '/home/user0/rlq/THUNLP_Multimodal_Excercise/MODEL_CKPT/MLLM_Excercise_Model'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+Traceback (most recent call last):
+  File "/var/envs/rlq/lib/python3.10/site-packages/transformers/utils/hub.py", line 398, in cached_file
+    resolved_file = hf_hub_download(
+  File "/var/envs/rlq/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/var/envs/rlq/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/home/user0/rlq/THUNLP_Multimodal_Excercise/MODEL_CKPT/MLLM_Excercise_Model'. Use `repo_type` argument if needed.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/user0/qinyh/codebase/THUNLP_Multimodal_Excercise/mllm/finetune.py", line 351, in <module>
+    train()
+  File "/home/user0/qinyh/codebase/THUNLP_Multimodal_Excercise/mllm/finetune.py", line 317, in train
+    model, data_module, tokenizer = init_model(model_args, data_args, training_args, lora_args)
+  File "/home/user0/qinyh/codebase/THUNLP_Multimodal_Excercise/mllm/finetune.py", line 204, in init_model
+    model = MLLMModel.from_pretrained(
+  File "/var/envs/rlq/lib/python3.10/site-packages/transformers/modeling_utils.py", line 3015, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/var/envs/rlq/lib/python3.10/site-packages/transformers/utils/hub.py", line 462, in cached_file
+    raise EnvironmentError(
+OSError: Incorrect path_or_model_id: '/home/user0/rlq/THUNLP_Multimodal_Excercise/MODEL_CKPT/MLLM_Excercise_Model'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+Traceback (most recent call last):
+  File "/var/envs/rlq/lib/python3.10/site-packages/transformers/utils/hub.py", line 398, in cached_file
+    resolved_file = hf_hub_download(
+  File "/var/envs/rlq/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/var/envs/rlq/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/home/user0/rlq/THUNLP_Multimodal_Excercise/MODEL_CKPT/MLLM_Excercise_Model'. Use `repo_type` argument if needed.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/user0/qinyh/codebase/THUNLP_Multimodal_Excercise/mllm/finetune.py", line 351, in <module>
+    train()
+  File "/home/user0/qinyh/codebase/THUNLP_Multimodal_Excercise/mllm/finetune.py", line 317, in train
+    model, data_module, tokenizer = init_model(model_args, data_args, training_args, lora_args)
+  File "/home/user0/qinyh/codebase/THUNLP_Multimodal_Excercise/mllm/finetune.py", line 204, in init_model
+    model = MLLMModel.from_pretrained(
+  File "/var/envs/rlq/lib/python3.10/site-packages/transformers/modeling_utils.py", line 3015, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/var/envs/rlq/lib/python3.10/site-packages/transformers/utils/hub.py", line 462, in cached_file
+    raise EnvironmentError(
+OSError: Incorrect path_or_model_id: '/home/user0/rlq/THUNLP_Multimodal_Excercise/MODEL_CKPT/MLLM_Excercise_Model'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+Traceback (most recent call last):
+  File "/var/envs/rlq/lib/python3.10/site-packages/transformers/utils/hub.py", line 398, in cached_file
+    resolved_file = hf_hub_download(
+  File "/var/envs/rlq/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/var/envs/rlq/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/home/user0/rlq/THUNLP_Multimodal_Excercise/MODEL_CKPT/MLLM_Excercise_Model'. Use `repo_type` argument if needed.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/user0/qinyh/codebase/THUNLP_Multimodal_Excercise/mllm/finetune.py", line 351, in <module>
+    train()
+  File "/home/user0/qinyh/codebase/THUNLP_Multimodal_Excercise/mllm/finetune.py", line 317, in train
+    model, data_module, tokenizer = init_model(model_args, data_args, training_args, lora_args)
+  File "/home/user0/qinyh/codebase/THUNLP_Multimodal_Excercise/mllm/finetune.py", line 204, in init_model
+    model = MLLMModel.from_pretrained(
+  File "/var/envs/rlq/lib/python3.10/site-packages/transformers/modeling_utils.py", line 3015, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/var/envs/rlq/lib/python3.10/site-packages/transformers/utils/hub.py", line 462, in cached_file
+    raise EnvironmentError(
+OSError: Incorrect path_or_model_id: '/home/user0/rlq/THUNLP_Multimodal_Excercise/MODEL_CKPT/MLLM_Excercise_Model'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+Traceback (most recent call last):
+  File "/var/envs/rlq/lib/python3.10/site-packages/transformers/utils/hub.py", line 398, in cached_file
+    resolved_file = hf_hub_download(
+  File "/var/envs/rlq/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/var/envs/rlq/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/home/user0/rlq/THUNLP_Multimodal_Excercise/MODEL_CKPT/MLLM_Excercise_Model'. Use `repo_type` argument if needed.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/user0/qinyh/codebase/THUNLP_Multimodal_Excercise/mllm/finetune.py", line 351, in <module>
+    train()
+  File "/home/user0/qinyh/codebase/THUNLP_Multimodal_Excercise/mllm/finetune.py", line 317, in train
+    model, data_module, tokenizer = init_model(model_args, data_args, training_args, lora_args)
+  File "/home/user0/qinyh/codebase/THUNLP_Multimodal_Excercise/mllm/finetune.py", line 204, in init_model
+    model = MLLMModel.from_pretrained(
+  File "/var/envs/rlq/lib/python3.10/site-packages/transformers/modeling_utils.py", line 3015, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/var/envs/rlq/lib/python3.10/site-packages/transformers/utils/hub.py", line 462, in cached_file
+    raise EnvironmentError(
+OSError: Incorrect path_or_model_id: '/home/user0/rlq/THUNLP_Multimodal_Excercise/MODEL_CKPT/MLLM_Excercise_Model'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+Traceback (most recent call last):
+  File "/var/envs/rlq/lib/python3.10/site-packages/transformers/utils/hub.py", line 398, in cached_file
+    resolved_file = hf_hub_download(
+  File "/var/envs/rlq/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/var/envs/rlq/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/home/user0/rlq/THUNLP_Multimodal_Excercise/MODEL_CKPT/MLLM_Excercise_Model'. Use `repo_type` argument if needed.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/user0/qinyh/codebase/THUNLP_Multimodal_Excercise/mllm/finetune.py", line 351, in <module>
+    train()
+  File "/home/user0/qinyh/codebase/THUNLP_Multimodal_Excercise/mllm/finetune.py", line 317, in train
+    model, data_module, tokenizer = init_model(model_args, data_args, training_args, lora_args)
+  File "/home/user0/qinyh/codebase/THUNLP_Multimodal_Excercise/mllm/finetune.py", line 204, in init_model
+    model = MLLMModel.from_pretrained(
+  File "/var/envs/rlq/lib/python3.10/site-packages/transformers/modeling_utils.py", line 3015, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/var/envs/rlq/lib/python3.10/site-packages/transformers/utils/hub.py", line 462, in cached_file
+    raise EnvironmentError(
+OSError: Incorrect path_or_model_id: '/home/user0/rlq/THUNLP_Multimodal_Excercise/MODEL_CKPT/MLLM_Excercise_Model'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+[2025-06-30 10:31:51,621] torch.distributed.elastic.multiprocessing.api: [ERROR] failed (exitcode: 1) local_rank: 0 (pid: 1311706) of binary: /var/envs/rlq/bin/python3.10
+Traceback (most recent call last):
+  File "/var/envs/rlq/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/var/envs/rlq/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 346, in wrapper
+    return f(*args, **kwargs)
+  File "/var/envs/rlq/lib/python3.10/site-packages/torch/distributed/run.py", line 806, in main
+    run(args)
+  File "/var/envs/rlq/lib/python3.10/site-packages/torch/distributed/run.py", line 797, in run
+    elastic_launch(
+  File "/var/envs/rlq/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 134, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/var/envs/rlq/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+mllm/finetune.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2025-06-30_10:31:51
+  host      : node2.cluster.local
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 1311707)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2025-06-30_10:31:51
+  host      : node2.cluster.local
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 1311708)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2025-06-30_10:31:51
+  host      : node2.cluster.local
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 1311709)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[4]:
+  time      : 2025-06-30_10:31:51
+  host      : node2.cluster.local
+  rank      : 4 (local_rank: 4)
+  exitcode  : 1 (pid: 1311710)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[5]:
+  time      : 2025-06-30_10:31:51
+  host      : node2.cluster.local
+  rank      : 5 (local_rank: 5)
+  exitcode  : 1 (pid: 1311711)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[6]:
+  time      : 2025-06-30_10:31:51
+  host      : node2.cluster.local
+  rank      : 6 (local_rank: 6)
+  exitcode  : 1 (pid: 1311712)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[7]:
+  time      : 2025-06-30_10:31:51
+  host      : node2.cluster.local
+  rank      : 7 (local_rank: 7)
+  exitcode  : 1 (pid: 1311713)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-06-30_10:31:51
+  host      : node2.cluster.local
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 1311706)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

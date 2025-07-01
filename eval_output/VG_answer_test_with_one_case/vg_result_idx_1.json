@@ -1,0 +1,19 @@
+{
+  "index": 1,
+  "expression": "dish in top right corner",
+  "ground_truth_bbox": [
+    468.3,
+    0.91,
+    640.0,
+    117.03
+  ],
+  "predicted_bbox": [
+    458.24,
+    0.0,
+    640.0,
+    157.14
+  ],
+  "iou": 0.6980592608451843,
+  "correct": true,
+  "raw_answer": "[458.24,0.00,640.00,157.14]"
+}
