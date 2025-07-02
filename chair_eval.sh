@@ -7,7 +7,7 @@ echo "========================="
 python eval/chair.py \
     --coco_path data/annotations \
     --cache data/chair_300.pkl \
-    --cap_file objhal_bench_answer_greedy.jsonl \
+    --cap_file objhal_benc_mllm_preference_training_answer_greedy.jsonl \
     --save_path eval-chair-300_answer.json \
     --caption_key answer
 
