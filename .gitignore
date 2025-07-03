@@ -47,3 +47,5 @@ submissions/
 # Data
 data/images
 data/*
+!data/prepare_grounding.py
+!data/read_data.py
