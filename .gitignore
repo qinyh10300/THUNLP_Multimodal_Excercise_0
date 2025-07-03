@@ -49,3 +49,9 @@ data/images
 data/*
 !data/prepare_grounding.py
 !data/read_data.py
+!data/train_minicpmv_grounding_9000.json
+!data/val_minicpmv_grounding_1244.json
+
+# model_upload_huggingface/example_usage.md
+# model_upload_huggingface/model_download.py
+model_upload_huggingface/upload_llm_hf.sh
